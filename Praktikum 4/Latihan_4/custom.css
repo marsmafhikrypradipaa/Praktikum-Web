@@ -1,0 +1,19 @@
+/*selektor id*/
+#atas {
+  background-color: lightblue;
+  color: yellow;
+  text-align: center;
+  font-size: 50px;
+}
+
+/*selektor tag*/
+h1 {
+  color: navy;
+}
+
+/*selektor class*/
+.isi {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 30px;
+  color: green;
+}
