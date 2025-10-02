@@ -1,130 +1,137 @@
-/* Reset default style */
+/* Reset default style semua elemen */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; /* hapus margin default */
+  padding: 0; /* hapus padding default */
+  box-sizing: border-box; /* biar padding & border gak nambah ukuran elemen */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* font modern */
 }
 
-/* Body styling */
+/* Styling body utama */
 body {
-  background: #f4f6f9;
-  color: #333;
-  line-height: 1.6;
+  background: beige; /* warna latar abu muda */
+  color: solid black; /* teks abu gelap */
+  line-height: 1.6; /* spasi antar baris teks */
 }
 
-/* Header */
+/* Bagian header */
 header {
-  background: linear-gradient(135deg, #4a90e2, #357abd);
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background: gray; /* gradasi biru */
+  color: beige; /* teks putih */
+  text-align: center; /* rata tengah */
+  padding: 2rem 1rem; /* ruang dalam */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* bayangan bawah */
 }
 
 header h1 {
-  font-size: 2rem;
-  letter-spacing: 1px;
+  font-size: 2rem; /* ukuran judul */
+  letter-spacing: 1px; /* jarak antar huruf */
 }
 
-/* Container utama */
+/* Container utama (isi konten profil) */
 .container {
-  max-width: 800px;
-  margin: 2rem auto;
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  max-width: 800px; /* lebar maksimal */
+  margin: 2rem auto; /* posisi di tengah */
+  background: white; /* latar putih */
+  padding: 2rem; /* ruang dalam */
+  border-radius: 15px; /* sudut melengkung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* bayangan lembut */
+  text-align: center; /* isi rata tengah */
 }
 
-/* Foto Profile */
+/* Foto profil */
 .profile-img {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 4px solid #4a90e2;
-  transition: transform 0.3s ease;
+  border-radius: 50%; /* jadi lingkaran */
+  object-fit: cover; /* foto biar tidak gepeng */
+  margin-bottom: 1rem; /* jarak bawah */
+  border: 4px solid ghostwhite; /* border biru */
+  transition: transform 0.3s ease; /* animasi halus saat hover */
 }
 
 .profile-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* zoom sedikit kalau di-hover */
 }
 
-/* Heading */
+/* Sub-judul (Visi, Misi, Kontak, dll.) */
 h2 {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #357abd;
+  color: brown; /* biru lebih gelap */
   font-size: 1.5rem;
   position: relative;
 }
 
+.nama {
+  color: brown;
+}
+
+/* Garis kecil di bawah setiap h2 */
 h2::after {
   content: "";
   display: block;
   width: 50px;
   height: 3px;
-  background: #4a90e2;
-  margin: 0.5rem auto;
-  border-radius: 2px;
+  background: brown; /* warna biru */
+  margin: 0.5rem auto; /* posisi di tengah */
+  border-radius: 2px; /* ujung melengkung */
 }
 
-/* Paragraf dan list */
+/* Paragraf */
 p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  margin-bottom: 1rem; /* jarak bawah */
+  font-size: 1rem; /* ukuran teks normal */
 }
 
+/* Daftar list (misi) */
 ul {
-  list-style: none;
+  list-style: none; /* hilangkan bullet bawaan */
   padding: 0;
   margin-bottom: 1rem;
 }
 
 ul li {
-  background: #f0f4f8;
-  margin: 0.5rem 0;
-  padding: 0.7rem 1rem;
-  border-radius: 8px;
-  text-align: left;
-  transition: background 0.3s ease;
+  background: beige; /* latar abu muda */
+  margin: 0.5rem 0; /* jarak antar item */
+  padding: 0.7rem 1rem; /* ruang dalam */
+  border-radius: 8px; /* sudut melengkung */
+  text-align: left; /* rata kiri */
+  transition: background 0.3s ease; /* animasi hover */
 }
 
 ul li:hover {
-  background: #e0ebf7;
+  background: gray; /* berubah warna saat hover */
 }
 
-/* Link */
+/* Link umum */
 a {
-  color: #4a90e2;
-  text-decoration: none;
+  color: brown; /* warna biru */
+  text-decoration: none; /* hilangkan garis bawah */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #1f5fa8;
+  color: #1f5fa8; /* warna lebih gelap saat hover */
 }
 
+/* Bagian link kembali */
 .back-link {
-  margin-top: 2rem;
+  margin-top: 2rem; /* jarak atas */
 }
 
 .back-link a {
-  display: inline-block;
-  background: #4a90e2;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  display: inline-block; /* biar bisa diatur seperti tombol */
+  background: brown; /* tombol biru */
+  color: white; /* teks putih */
+  padding: 0.6rem 1.2rem; /* ruang dalam tombol */
+  border-radius: 8px; /* sudut melengkung */
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, transform 0.2s ease; /* animasi hover */
 }
 
 .back-link a:hover {
-  background: #357abd;
-  transform: translateY(-2px);
+  background: darkgray; /* biru lebih gelap saat hover */
+  transform: translateY(-2px); /* tombol naik sedikit */
 }
