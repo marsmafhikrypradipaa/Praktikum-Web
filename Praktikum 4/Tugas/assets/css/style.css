@@ -1,0 +1,86 @@
+/* Reset default style */ /* komentar: jelaskan tujuan blok ini */
+* {
+  /* universal selector — pilih semua elemen */
+  margin: 0; /* hapus margin bawaan browser supaya konsisten */
+  padding: 0; /* hapus padding bawaan browser supaya konsisten */
+  box-sizing: border-box; /* buat width/height termasuk padding & border */
+}
+
+body {
+  /* gaya dasar halaman */
+  font-family: "Times New Roman", Times, serif; /* font default halaman */
+  background: #f4f4f4; /* warna latar halaman (abu-abu terang) */
+}
+
+#wrap {
+  /* wadah utama konten */
+  width: 800px; /* lebar tetap wadah (bisa diganti responsive) */
+  margin: 40px auto; /* beri jarak vertikal 40px dan center horizontal */
+  text-align: center; /* teks di dalam #wrap rata-tengah */
+}
+
+h3 {
+  /* judul utama (h3) */
+  margin-bottom: 10px; /* jarak bawah 20px untuk memisahkan dari menu */
+  color: #333; /* warna teks judul (abu gelap) */
+}
+
+/* MENU */ /* komentar: mulai gaya menu utama */
+#menu ul {
+  /* target elemen <ul> di dalam #menu */
+  list-style: none; /* hilangkan bullet list default */
+  background: #333; /* latar menu utama (hitam keabu-abuan) */
+  display: flex; /* buat item menu berada sejajar (horizontal) */
+  justify-content: center; /* ratakan item menu ke tengah */
+}
+
+#menu ul li {
+  /* setiap <li> di menu */
+  position: relative; /* agar child absolute (submenu) relatif ke sini */
+}
+
+#menu ul li a {
+  /* tautan di setiap item menu */
+  display: block; /* jadikan area link berupa kotak (mudah di-klik) */
+  padding: 12px 20px; /* jarak dalam (vertical 12px, horizontal 20px) */
+  text-decoration: none; /* hilangkan garis bawah link */
+  color: white; /* warna teks link */
+  font-weight: bold; /* teks link tebal */
+  transition: background 0.3s; /* transisi halus saat background berubah (hover) */
+}
+
+#menu ul li a:hover {
+  /* saat pointer mengarah ke link */
+  background: gray; /* ubah latar link (efek hover) */
+}
+
+/* SUBMENU */ /* komentar: gaya untuk dropdown/submenu */
+#menu ul li ul {
+  /* <ul> yang berada di dalam <li> (submenu) */
+  position: absolute; /* keluarkan dari aliran normal; pos relatif ke parent */
+  top: 100%; /* letakkan tepat di bawah parent (100% tinggi parent) */
+  left: 0; /* mulai dari sisi kiri parent */
+  width: 100%; /* lebar submenu sama persis dengan parent <li> */
+  background: #444; /* latar submenu (sedikit lebih terang dari menu utama) */
+  display: none; /* sembunyikan submenu secara default */
+  flex-direction: column; /* jika ditampilkan sebagai flex, susun vertikal */
+  text-align: center; /* teks dalam item submenu rata kiri */
+}
+
+#menu ul li ul li a {
+  /* gaya untuk link di dalam item submenu */
+  padding: 10px; /* padding lebih kecil agar rapi */
+  font-weight: normal; /* font normal (bukan bold) untuk submenu */
+  color: whitesmoke; /* teks putih agar kontras */
+}
+
+#menu ul li ul li a:hover {
+  /* hover untuk link submenu */
+  background: #666; /* beri efek latar saat hover submenu */
+}
+
+/* Tampilkan submenu saat hover */
+#menu ul li:hover > ul {
+  /* saat hover pada <li>, pilih anak langsung <ul> */
+  display: flex; /* tampilkan submenu; flex dipakai supaya column bekerja */
+}
