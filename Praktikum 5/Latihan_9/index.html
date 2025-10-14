@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Operasi Relational (Corrected)</title>
+    <script type="text/javascript">
+      function test() {
+        // Meminta input dari pengguna
+        let val1 = window.prompt("Masukkan Nilai Pertama:");
+        let val2 = window.prompt("Masukkan Nilai Kedua:");
+
+        // PENTING: Mengubah input dari teks (string) menjadi angka (number)
+        // Tanpa ini, perbandingan bisa salah (contoh: "10" < "2" akan dianggap benar)
+        val1 = Number(val1);
+        val2 = Number(val2);
+
+        // Menampilkan nilai awal
+        document.write("Nilai Pertama (val1): <b>" + val1 + "</b><br>");
+        document.write("Nilai Kedua (val2): <b>" + val2 + "</b><br><hr>");
+
+        // Melakukan dan menampilkan hasil perbandingan dengan benar
+        document.write(
+          val1 + " > " + val2 + " adalah <b>" + (val1 > val2) + "</b><br>"
+        );
+        document.write(
+          val1 + " < " + val2 + " adalah <b>" + (val1 < val2) + "</b><br>"
+        );
+        document.write(
+          val1 + " == " + val2 + " adalah <b>" + (val1 == val2) + "</b><br>"
+        );
+
+        // Ini adalah perbaikan dari baris 16 dan 18 yang error
+        document.write(
+          val1 + " >= " + val2 + " adalah <b>" + (val1 >= val2) + "</b><br>"
+        );
+        document.write(
+          val1 + " <= " + val2 + " adalah <b>" + (val1 <= val2) + "</b><br>"
+        );
+
+        document.write(
+          val1 + " != " + val2 + " adalah <b>" + (val1 != val2) + "</b><br>"
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Klik tombol untuk memulai perbandingan</h2>
+    <input
+      type="button"
+      name="button1"
+      value="Bandingkan Nilai"
+      onclick="test()"
+    />
+  </body>
+</html>
